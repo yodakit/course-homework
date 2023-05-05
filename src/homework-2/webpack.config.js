@@ -10,6 +10,12 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
+  mode: 'none',
+  devServer: {
+    static: './dist',
+    compress: true,
+    port: 3000,
+  },
   module: {
     rules: [
       {
