@@ -1,12 +1,24 @@
 import LinkedList from './linkedList'
 
-const list = new LinkedList()
+const prependedList = new LinkedList()
+const appendedList = new LinkedList()
 
-list.add(1)
-list.add(2)
-list.add(3)
+prependedList.prepend(1)
+prependedList.prepend(2)
+prependedList.prepend(3)
 
-console.log(list.first.value);           // 1
-console.log(list.last.value);            // 3
-console.log(list.first.next.value);      // 2
-console.log(list.first.next.prev.value); // 1
+console.log(prependedList.first?.value);           // 1
+console.log(prependedList.last?.value);            // 3
+console.log(prependedList.first?.next?.value);      // 2
+console.log(prependedList.first?.next?.prev?.value); // 1
+
+console.log('---')
+
+appendedList.append(1)
+appendedList.append(2)
+appendedList.append(3)
+
+console.log(appendedList.first?.value);           // 3
+console.log(appendedList.last?.value);            // 1
+console.log(appendedList.first?.next?.value);      // 2
+console.log(appendedList.first?.next?.prev?.value); // 3
