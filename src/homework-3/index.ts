@@ -18,7 +18,20 @@ appendedList.append(1)
 appendedList.append(2)
 appendedList.append(3)
 
+
 console.log(appendedList.first?.value);           // 3
 console.log(appendedList.last?.value);            // 1
 console.log(appendedList.first?.next?.value);      // 2
 console.log(appendedList.first?.next?.prev?.value); // 3
+
+console.log('---')
+
+const list = new LinkedList()
+
+list.prepend(1);
+list.prepend(2);
+list.prepend(3);
+
+for (const value of list) {
+  console.log(value);
+}

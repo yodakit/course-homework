@@ -40,4 +40,12 @@ export default class LinkedList {
     this.last.next = node
     this.last = node
   }
+  *[Symbol.iterator]() {
+    let node = this.first;
+    
+    while(node) {
+      yield node.value
+      node = node.next
+    }
+  }
 }
